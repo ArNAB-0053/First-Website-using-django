@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Gentium+Book+Plus:ital@1&family=Lobster&family=Roboto+Slab&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&display=swap');
+
+        .nav-item {
+            font-size: 19px;
+        }
+        body{
+          background-color: #283035;
+          color: white;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+        .navbar{
+          margin-top: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-bottom: 0;
+          padding: 10px;
+          border-radius: 0px;
+          background-color: #6A85B6;
+          color: #FFFFFF;
+          font-family: 'Sawarabi Mincho', serif;
+          font-weight: 700;
+        }
+        a.nav-link{
+          color: #FFFFFF;
+        }
+        footer{
+          margin-top: auto;
+          margin-bottom: -100px;
+          padding: 0px 0px 0px 0px;
+          height: 7vh;
+          background: #303A40;
+          color: aliceblue;
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .alert{
+          margin-top: 0px 0px 0px 0px;
+          margin-bottom: 0px;
+          padding: 0px 0px 0px 0px;  
+          border-radius: 0px;    
+          height: 5vh;
+          background: #03A129;
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .bi{
+          margin: 0px 0px 0px 0px;
+          padding: 0px 0px 0px 0px;
+        }
+        .mes{
+          font-size: 19px;
+        }
+        .contacth1{
+          font-family: 'Gentium Book Plus', serif;
+        }
+        h1 {
+          font-family: 'Bree Serif', serif;
+          font-size: 50px;
+        }
+        .fs-2{
+          font-family: 'Great Vibes', cursive;
+        }
+        .btn{
+          background-color: #6E45E2;
+          color: #FFFFFF;
+          border-width: 1px;
+          border-color: black;
+          transition: all .7s;
+        }
+        h2 {
+          font-family: 'Montserrat Subrayada', sans-serif;
+          font-size: 90px;
+        }
+        h3 {
+          font-family: 'Great Vibes', cursive;
+          font-size: 70px;
+        }
+        h4 {
+          font-family: font-family: 'Lato', sans-serif
+          font-size: 40px;
+        }
+    </style>
+  </head>
+  <body class="body">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Programming</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                  </li>
+                  <li class="nav-item dropdown nav-light">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Languages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/python">Python</a></li>
+                      <li><a class="dropdown-item" href="/java">Java</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/other">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <!-- {% comment %} <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li> {% endcomment %} -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contactMe">Contact me</a>
+                  </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      <div class="mes">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>
+        {{ message }}
+    </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block body %}{% endblock body %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+
+  <footer class="footer">
+    <p>Copyright &copy; 2023 SeachCode.com</p>
+    {% block footer %}{% endblock footer %}
+  </footer>
+</html>

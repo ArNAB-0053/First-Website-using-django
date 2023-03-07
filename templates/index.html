@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+<div class="container my-3 px-3">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/500x500/?html" class="rounded-circle" alt="..." >
+            <div class="carousel-caption d-flex flex-row-reverse justify-content-start">
+              <pre>
+                <h2>Welcome</h2>
+<h4>To</h4>
+<h3>Search Code</h3></pre>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/500x500/?computer" class="rounded-circle" alt="...">
+            <div class="carousel-caption d-flex flex-row-reverse justify-content-start">
+              <pre>
+                <h2>Search...</h2><h4>to gather</h4><h3>Knowledge</h3></pre>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/500x500/?coding" class="rounded-circle" alt="...">
+            <div class="carousel-caption d-flex flex-row-reverse justify-content-start">
+              <pre><h2>Courses</h2><h4>to learn</h4><h3>all about programming</h3></pre>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class = "couse my-5 px-2 text-center"><h1>Recommended Courses</h1></div>
+      {% comment %} 1.1 {% endcomment %}
+      <div class="row g-4 mx-3 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/html2.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn html</h3>
+          <p class="coursedesc text-center">HTML (Hypertext Markup Language) is a markup language used for creating and structuring content on the web. It uses a set of tags and attributes to define the different elements of a webpage.</p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div> {% comment %} 1.2 {% endcomment %}
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/python.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn Python</h3>
+          <p class="coursedesc text-center">Python is a high-level, interpreted programming language known for its simplicity, readability, and vast libraries.</p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>{% comment %} 1.3 {% endcomment %}
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/java.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn Java</h3>
+          <p class="coursedesc text-center">Java is a popular, high-level, object-oriented programming language that is designed to be portable, meaning that code written in Java can run on multiple platforms without any modification.</p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+      </div>
+      <div class="row g-4 mx-3 py-5 row-cols-1 row-cols-lg-3">
+        {% comment %} 2.1 feature {% endcomment %}
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/C.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn C Programming</h3>
+          <p class="coursedesc text-center my-4 px-4">C is a high-level, procedural programming language that is widely used for system programming, embedded systems, and application development. It is known for its speed, efficiency, and portability, and has influenced many other programming languages.</p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>{% comment %} 2.2 {% endcomment %}
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/cPlus.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn C++</h3>
+          <p class="coursedesc text-center">C++ is a popular, high-level, object-oriented programming language that is widely used for building complex software applications, including operating systems, browsers, games, and databases. </p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>{% comment %} 2.3 {% endcomment %}
+        <div class="feature col">
+          <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-3">
+            <img src="static/img/js.jpg" class="center" alt="...">
+          </div>
+          <h3 class="fs-2 text-center">Learn JavaScripts</h3>
+          <p class="coursedesc text-center">JavaScript is a high-level, object-oriented programming language used primarily for client-side web development. It allows developers to add dynamic and interactive elements to web pages, such as animations, form validation, and user interfaces.</p>
+          <a href="#" class="icon-link d-flex align-items-center justify-content-center">
+            Course
+            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+      </div>
+</div>
+{% endblock body %}
+
+{% block footer %}{% endblock footer %}
